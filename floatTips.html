@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid red;
+            height: 300px;
+            padding:10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        button{
+            position:relative;
+        }
+        button span{
+            position:absolute;
+            white-space:nowrap;     /*不换行*/
+            border:1px solid red;
+            bottom: calc(100% + 10px); /*100%距离+10px*/
+            transform: translate(-50%);     /*相对于父元素居中*/
+        }
+        button .tips{
+            display: none;
+        }
+        button:hover .tips{
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="height:100px;"></div>
+        <button>提示
+            <span class="tips">提示内容</span>
+        </button>
+    </div>
+
+</body>
+</html>
