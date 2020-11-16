@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatingHeart</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        .heart{
+            margin:200px;
+            position:relative;
+            display: inline-block;
+            transition:all .7s;
+        }
+        .heart:hover{
+            transform:scale(1.4);
+        }
+        .left{
+            width:100px;
+            height:100px;
+            background:red;
+            position:absolute;
+            bottom:100%;
+            right:100%;
+            transform:rotate(45deg) translateX(60px);
+            border-radius:50% 0% 0% 50%;
+        }
+        .right{
+            width:100px;
+            height:100px;
+            background:red;
+            position:absolute;
+            bottom:100%;
+            left:100%;
+            transform:rotate(45deg) translateY(60px);
+            border-radius:50% 50% 0% 0%;
+
+        }
+        .bottom{
+            width:100px;
+            height:100px;
+            background:red;
+            transform:rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+</html>
